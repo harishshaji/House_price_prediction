@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <style>
+        body{
+            background-image:url("{%static 'img2.jpg'%}");
+            background-repeat:no-repeat;
+            background-size:cover;
+
+
+        }
+
+        div{
+           border-radius: 15px 50px;
+           background: #73AD21;
+           padding: 60px;
+           position:static;
+           margin-top:150px;
+           margin-left:340px;
+           margin-right:350px;
+           opacity:0.9;
+           color:purple;
+           box-shadow: 5px 5px 5px lightblue;
+           animation-name: example;
+           animation-duration: 15s;
+           animation-iteration-count: infinite;
+
+        }
+
+        input[type=submit]{
+            background-color:green;
+            color:white;
+            cursor:pointer;
+            padding:8px 30px
+
+
+
+
+
+        }
+        input[type=reset]{
+            background-color:red;
+            color:white;
+            cursor:pointer;
+            padding:8px 30px
+
+        }
+        @keyframes example {
+        0%   {background-color:pink; left:0px; top:0px;}
+        25%  {background-color:gray; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:black; left:0px; top:0px;}
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <form action = "result">
+            <table cellspacing="3" cellpadding="3",style="background-color:gray;padding:40px;border-radius: 15px 50px;">
+                <caption style="color:purple;text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;"><h1>Enter the following fields</h1></caption>
+                <tr>
+                <th style = "background-color:red">Avg Area Inc.<br>
+                    <input type="text" placeholder="Avg income."></th>
+                <th style = "background-color:red">Avg Area House Age.<br>
+                    <input type="text" placeholder="House age"></th>
+                <th style = "background-color:red">Avg No of Room.<br>
+                    <input type="text" placeholder="Avg no rooms."></th></tr>
+
+                <tr>
+                <tr></tr>
+                <th style = "background-color:red">Avg Area number of bedroom<br>
+                    <input type="text" placeholder="Avg bedroom no"></th>
+                <th style = "background-color:red">Avg Area Population<br>
+                    <input type="text" placeholder="House age"></th>
+                </tr>
+                <tr>
+                <tr><th></th></tr>
+                    <th ><input type="reset"></th>
+                    <th ><input type="submit" value="Predict"></th>
+                </tr>
+            </table>
+        </form></div>
+</body>
+</html>

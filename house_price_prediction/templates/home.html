@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-image:url("{%static '120513790.jpg'%}");
+            background-repeat:no-repeat;
+            background-size:cover;
+            color:  purple;
+
+
+        }
+        table{
+            background-color:gray;
+
+            opacity: 0.9;
+            margin-top:2px;
+            margin-left:5px;
+            font-family: Tahoma, Verdana, sans-serif;
+            font-variant: small-caps;
+            border:5px solid pink;
+            color:purple;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+        /*th,td{
+            border:5px solid red;
+            opacity: 0.3;
+        }*/
+        input[type=submit]{
+            background-color:#008CBA;
+            color:black;
+            cursor:pointer;
+            padding:8px 30px
+
+
+        }
+        @keyframes example {
+        0%   {background-color:brown; left:0px; top:0px;}
+        25%  {background-color:gray; left:200px; top:0px;}
+        50%  {background-color:black; left:200px; top:200px;}
+        75%  {background-color:brown; left:0px; top:200px;}
+        100% {background-color:gray; left:0px; top:0px;}
+        }
+        div {
+            width: 500px;
+            padding: 1px;
+            border: 5px solid gray;
+            margin: 0;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            animation-name: example;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            position:static;
+
+        }
+        .d{
+        border-radius: 15px 50px;
+           background: #73AD21;
+           padding: 10px;
+           position:absolute;
+           margin-top:250px;
+           margin-left:420px;
+
+           opacity:0.9;
+           color:purple;
+           box-shadow: 5px 5px 5px lightblue;
+           animation-name: example;
+           animation-duration: 15s;
+           animation-iteration-count: infinite;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+<center><div> <h1>Welcome to House Price Prediction System</h1></div></center>
+<div class="d">
+<center>
+<table>
+
+    <tr><th><h1>To predict a <u>House</u> price</h1></th></tr>
+    <tr><th><h3>Click Here</h3></th></tr>
+    <form action = "predict">
+    <tr><th> <input type = "submit" , value = "Let's GO..">  </th></tr>
+    </form>
+
+
+</form>
+</table>
+</center>
+</div>
+
+</body>
+</html>
