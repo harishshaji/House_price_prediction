@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <style>
+        body{
+            background-image:url("{%static 'img2.jpg'%}");
+            background-repeat:no-repeat;
+            background-size:cover;
+
+
+        }
+
+        div{
+           border-radius: 15px 50px;
+           background: #73AD21;
+           padding: 60px;
+           position:static;
+           margin-top:150px;
+           margin-left:340px;
+           margin-right:350px;
+           opacity:0.9;
+           color:purple;
+           box-shadow: 5px 5px 5px lightblue;
+
+
+        }
+
+        input[type=submit]{
+            background-color:green;
+            color:white;
+            cursor:pointer;
+            padding:8px 30px
+
+
+
+
+
+        }
+        input[type=reset]{
+            background-color:red;
+            color:white;
+            cursor:pointer;
+            padding:8px 30px
+
+        }
+        @keyframes example {
+        0%   {background-color:pink; left:0px; top:0px;}
+        25%  {background-color:gray; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:black; left:0px; top:0px;}
+        }
+
+
+    </style>
+</head>
+<body><h1><center>Welcome to House Price Prediction System</center></h1>
+
+    <div>
+                        <form action="/predict" method="POST">
+            <table cellspacing="3" cellpadding="3",style="background-color:gray;padding:40px;border-radius: 15px 50px;">
+                <caption style="color:black;text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px red;"><h1>Enter the following fields</h1></caption>
+                <tr>
+                <th width="168" style = "background-color:red">MSSubclass.<br>
+                  <select name="n1" id="mss">
+                    <option value="1">20</option>
+                    <option value="2">30</option>
+                    <option value="3">45</option>
+                    <option value="4">50</option>
+                    <option value="5">60</option>
+                    <option value="6">70</option>
+                    <option value="7">75</option>
+                    <option value="8">80</option>
+                    <option value="9">85</option>
+                    <option value="10">90</option>
+                    <option value="11">120</option>
+                    <option value="12">160</option>
+                    <option value="13">180</option>
+                    <option value="14">190</option>
+                  </select></th>
+                <th width="168" style = "background-color:red">MSZoning.<br>
+                    <select name="n2" id="msz">
+                    <option value="RM">RM</option>
+                    <option value="RL">RL</option>
+                    <option value="FV">FV</option>
+                    <option value="C(all)">C(all)</option>
+                    <option value="RH">RH</option>
+                  </select></th>
+                <th width="7432" style = "background-color:red">LotFrontage<br>
+                    <input type="text" name="n3" placeholder="LotFrontage"></th></tr>
+
+                <tr>
+                <tr></tr>
+                <th style = "background-color:red">Lot Area<br>
+                    <input type="text" name="n4" placeholder="Lot Area"></th>
+                <th style = "background-color:red">Street<br>
+                    <select name="n5" id="str">
+                    <option value="Pave">Pave</option>
+                    <option value="Grvl">Grvl</option>
+
+                  </select></th>
+                <th style = "background-color:red">Year Build<br>
+                    <input type="text" name="n6" placeholder="House age"></th>
+                </tr>
+
+                 <tr>
+                <tr></tr>
+
+                <th style = "background-color:red">Lot Shape<br>
+                    <select name="n7" id="cars">
+                    <option value="Reg">Reg</option>
+                    <option value="LR1">LR1</option>
+                    <option value="LR2">LR2</option>
+                    <option value="LR3">LR3</option>
+                  </select></th>
+                <th style = "background-color:red">First Floor St<br>
+                    <input type="text" name="n8" placeholder="First Floor St"></th>
+                <th style = "background-color:red">second Floor St<br>
+                    <input type="text" name="n9" placeholder="second Floor St"></th>
+                </tr>
+
+                <tr>
+                <tr><th></th></tr>
+                    <th ><input type="reset"></th>
+                    <th ><input type="submit" value="Predict"></th>
+                </tr>
+                 <tr><th>{{result2}}</th></tr>
+            </table>
+</form></div>
+</body>
+</html>
